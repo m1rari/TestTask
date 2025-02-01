@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\TestApp.Common.Enum\TestApp.Common.Enum.csproj" />
+    <ProjectReference Include="..\TestApp.Storage\TestApp.Storage.csproj" />
+    <ProjectReference Include="..\TestApp.Web.Domain.Abstraction\TestApp.Web.Domain.Abstraction.csproj" />
+  </ItemGroup>
+</Project>

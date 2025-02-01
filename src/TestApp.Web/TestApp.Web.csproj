@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <UserSecretsId>5a1a5aa5-a382-4e79-847a-fa0a82a9d7e2</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerComposeProjectPath>..\.docker\docker-compose.dcproj</DockerComposeProjectPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    </ItemGroup>
+
+
+
+    <ItemGroup>
+        <ProjectReference Include="..\TestApp.Common.Enum\TestApp.Common.Enum.csproj" />
+        <ProjectReference Include="..\TestApp.Storage\TestApp.Storage.csproj" />
+        <ProjectReference Include="..\TestApp.WebApi\TestApp.WebApi.csproj" /> 
+      <ProjectReference Include="..\TestApp.Web.Domain\TestApp.Web.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" />
+        <PackageVersion Include="FluentValidation.DependencyInjectionExtensions"/>
+        <PackageReference Include="FluentValidation.AspNetCore" />
+        <PackageReference Include="Swashbuckle" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+        <PackageVersion Include="Swashbuckle.AspNetCore.Annotations" />
+        
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TestApp.Common.Enum\TestApp.Common.Enum.csproj" />
+      <ProjectReference Include="..\TestApp.Web.Domain.Abstraction\TestApp.Web.Domain.Abstraction.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Middlewares\" />
+    </ItemGroup>
+
+    
+
+</Project>

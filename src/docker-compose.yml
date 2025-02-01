@@ -1,0 +1,6 @@
+﻿services:
+  testapp.web:
+    image: testapp.web
+    build:
+      context: .
+      dockerfile: TestApp.Web/Dockerfile
