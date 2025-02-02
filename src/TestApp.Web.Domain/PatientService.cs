@@ -11,13 +11,14 @@ namespace TestApp.Web.Domain;
 public class PatientService : IPatientService
 {
     private readonly DataContext _context;
-    
+
     public PatientService(DataContext context)
     {
         _context = context;
     }
-    
-    public async Task<PatientModel[]> GetPatientsAsync(FilterPrefixEnum doBFilter, DateTime? doB, CancellationToken token)
+
+    public async Task<PatientModel[]> GetPatientsAsync(FilterPrefixEnum doBFilter, DateTime? doB,
+        CancellationToken token)
     {
         var query = _context.Patients.AsNoTracking();
 
@@ -41,7 +42,7 @@ public class PatientService : IPatientService
 
         return Map(entities);
     }
-    
+
     public async Task<PatientModel> Get(Guid id, CancellationToken cancellationToken = default)
     {
         var entity = await _context.Patients.FirstOrDefaultAsync(x => x.Id == id, cancellationToken)
@@ -64,8 +65,6 @@ public class PatientService : IPatientService
             Gender = (byte)model.Gender,
             DoB = model.BirthDate,
             IsActive = model.Active,
-            
-            
             CreatedAt = timestamp,
             UpdatedAt = timestamp
         };
@@ -74,9 +73,9 @@ public class PatientService : IPatientService
         await _context.Patients.AddAsync(entity, token);
         await _context.SaveChangesAsync(token);
 
-        return model with { Name = model.Name with { Id = id }};
+        return model with { Name = model.Name with { Id = id } };
     }
-    
+
     public async Task Update(PatientModel model, CancellationToken token)
     {
         if (!model.Name.Id.HasValue)
@@ -100,10 +99,10 @@ public class PatientService : IPatientService
         _context.Patients.Update(entity);
         await _context.SaveChangesAsync(token);
     }
-    
+
     public async Task Delete(Guid id, CancellationToken token)
     {
-        var entity = await _context.Patients.FirstOrDefaultAsync(e => e.Id == id, token) 
+        var entity = await _context.Patients.FirstOrDefaultAsync(e => e.Id == id, token)
                      ?? throw new NotFoundException($"Пациент с ID {id} не найден");
 
         _context.Patients.Remove(entity);
@@ -114,11 +113,9 @@ public class PatientService : IPatientService
 
     private static PatientModel Map(Patient entity)
     {
-        var nameModel = new PatientNameModel(entity.Id, entity.Use, entity.Family, new[] { entity.Name, entity.Patronymic });
+        var nameModel =
+            new PatientNameModel(entity.Id, entity.Use, entity.Family, new[] { entity.Name, entity.Patronymic });
 
         return new(nameModel, (GenderEnum)entity.Gender, entity.DoB, entity.IsActive);
     }
-    
-    
-    
 }

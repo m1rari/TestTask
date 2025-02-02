@@ -38,6 +38,7 @@ internal sealed class ResourceService
         using var reader = new StreamReader(stream);
         var json = reader.ReadToEnd();
 
-        return JsonSerializer.Deserialize<ResourceModel>(json) ?? throw new InvalidOperationException("Ошибка десериализации JSON.");
+        return JsonSerializer.Deserialize<ResourceModel>(json) 
+               ?? throw new InvalidOperationException("Ошибка десериализации JSON.");
     }
 }

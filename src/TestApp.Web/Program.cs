@@ -1,11 +1,9 @@
-using Swashbuckle.AspNetCore.SwaggerUI;
 using TestApp.WebApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddApi(builder.Configuration);
-
 builder.Services
+    .AddApi(builder.Configuration)
     .AddSwagger(builder.Configuration)
     .AddValidators()
     .AddData()
@@ -13,18 +11,11 @@ builder.Services
 
 var app = builder.Build();
 
-// app.InitMigrations();
-//
-// app.UsenExceptionMiddleware();
 app.InitMigrations();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseSwagger();
-app.UseSwaggerUI(options =>
-{
-    // options.DocExpansion(DocExpansion.None);
-    // options.SwaggerEndpoint("/swagger/swagger.json", "API");
-});
+app.UseSwaggerUI();
 app.MapControllers();
 app.Run();
 

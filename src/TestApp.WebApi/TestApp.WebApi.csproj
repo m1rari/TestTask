@@ -6,13 +6,7 @@
 
     <ItemGroup>
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" />
-        <PackageVersion Include="FluentValidation.DependencyInjectionExtensions"/>
         <PackageReference Include="FluentValidation.AspNetCore" />
-        <PackageReference Include="Swashbuckle" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
-        <PackageReference Include="Swashbuckle.AspNetCore" />
-        <PackageVersion Include="Swashbuckle.AspNetCore.Annotations" />
-        
     </ItemGroup>
 
     <ItemGroup>

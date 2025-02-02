@@ -1,4 +1,6 @@
-﻿using DataSeeder.Models;
+﻿using DataSeeder.Configuration;
+using DataSeeder.Models;
+using Microsoft.Extensions.Options;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading;
@@ -8,20 +10,29 @@ namespace DataSeeder.Services;
 
 internal sealed class PatientService
 {
-    private readonly HttpClient _httpClient;
-    private static readonly string uri= "https://localhost:7089/api/Patient/Create";  // Укажите свой API URL
+    private  HttpClient _httpClient;
+    private readonly string _uri;
 
-
-    public PatientService(HttpClient httpClient)
+    public PatientService(HttpClient httpClient, IOptions<ApiSettings> apiSettings)
     {
+        var handler = new HttpClientHandler()
+        {
+            // только в рамках тестового задания и тестирования
+            ServerCertificateCustomValidationCallback = (request, cert, chain, errors) =>
+            {
+                return true;
+            }
+        };
         _httpClient = httpClient;
+       
+        _uri = apiSettings.Value.PatientCreateUri;
     }
 
     public async Task<PatientModel> Create(PatientModel model, CancellationToken token)
     {
         var json = JsonContent.Create(model);
-        
-        var response = await _httpClient.PostAsync(uri, json, token);
+   
+        var response = await _httpClient.PostAsync(_uri, json, token);
 
         if (!response.IsSuccessStatusCode)
         {

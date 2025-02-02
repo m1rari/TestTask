@@ -1,10 +1,9 @@
-version: '3.4'
 
 services:
   testapp.host:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443
+      - ASPNETCORE_URLS=http://+:443
     ports:
       - 18443:443
     volumes:

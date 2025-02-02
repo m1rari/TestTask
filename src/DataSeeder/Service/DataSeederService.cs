@@ -23,7 +23,7 @@ internal sealed class DataSeederService
     {
         _logger.LogInformation("🔄 Начало генерации данных...");
 
-        var patients = _dataGenerationService.Generate(10);
+        var patients = _dataGenerationService.Generate(100);
 
         _logger.LogInformation("✅ Генерация завершена! Отправка данных на API...");
 

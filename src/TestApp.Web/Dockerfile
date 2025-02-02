@@ -10,8 +10,8 @@ COPY ["Directory.Build.targets", "."]
 COPY ["Directory.Packages.props", "."]
 COPY ["TestApp.Web/TestApp.Web.csproj", "TestApp.Web/"]
 RUN dotnet restore "./TestApp.Web/TestApp.Web.csproj"
-COPY . .
-WORKDIR "/src/TestApp.Host"
+COPY . . 
+WORKDIR "/src/TestApp.Web"
 RUN dotnet build "./TestApp.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish

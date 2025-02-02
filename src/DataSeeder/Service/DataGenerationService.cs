@@ -27,7 +27,7 @@ internal sealed class DataGenerationService
             var patronymic = GetResource(_resourceService.Patronymic, gender, random);
             var birthDate = GetDate(random);
 
-            var nameModel = new PatientNameModel(null, null, family, new[] { name, patronymic });
+            var nameModel = new PatientNameModel(null, "oficial", family, new[] { name, patronymic });
             var model = new PatientModel(nameModel, gender, birthDate, active);
 
             models[i] = model;

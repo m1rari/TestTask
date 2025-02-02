@@ -22,11 +22,7 @@ public class GlobalExceptionFilter : IExceptionFilter
         {
             statusCode = (int)HttpStatusCode.BadRequest;
         }
-        else if (context.Exception is KeyNotFoundException) // 404 Not Found
-        {
-            statusCode = (int)HttpStatusCode.NotFound;
-        }
-
+        
         var errorResponse = new
         {
             StatusCode = statusCode,

@@ -1,0 +1,556 @@
+{
+	"info": {
+		"_postman_id": "defe1550-0d84-46d5-8810-f802395e990f",
+		"name": "TestApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41722523"
+	},
+	"item": [
+		{
+			"name": "1. Добавить",
+			"item": [
+				{
+					"name": "1.1 Добавить",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": {\r\n    \"use\": \"official\",\r\n    \"family\": \"Золотарев\",\r\n    \"given\": [\r\n      \"Михаил\",\r\n      \"Иванович\"\r\n    ]\r\n  },\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"2024-05-23T09:03:25.206Z\",\r\n  \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.2 Добавить",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": {\r\n    \"use\": \"official\",\r\n    \"family\": \"Михеев\",\r\n    \"given\": [\r\n      \"Артем\",\r\n      \"Артурович\"\r\n    ]\r\n  },\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"2024-06-11T09:03:25.206Z\",\r\n  \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.3 Добавить",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": {\r\n    \"use\": \"official\",\r\n    \"family\": \"Поляков\",\r\n    \"given\": [\r\n      \"Кирилл\",\r\n      \"Золотарев\"\r\n    ]\r\n  },\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"2024-07-09T09:03:25.206Z\",\r\n  \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.4 Добавить",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": {\r\n    \"use\": \"official\",\r\n    \"family\": \"Чистякова\",\r\n    \"given\": [\r\n      \"Есения\",\r\n      \"Георгиевна\"\r\n    ]\r\n  },\r\n  \"gender\": \"female\",\r\n  \"birthDate\": \"2024-04-07T09:03:25.206Z\",\r\n  \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.5 Добавить",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": {\r\n    \"use\": \"official\",\r\n    \"family\": \"Егорова\",\r\n    \"given\": [\r\n      \"София\",\r\n      \"Викторовна\"\r\n    ]\r\n  },\r\n  \"gender\": \"female\",\r\n  \"birthDate\": \"2024-03-16T09:03:25.206Z\",\r\n  \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Выбрать по дате",
+			"item": [
+				{
+					"name": "2.1 Выбрать все",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Get",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1 Выбрать с 'eq'",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Get?birthDate=eq2024-05-23T09:03:25.206Z",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Get"
+							],
+							"query": [
+								{
+									"key": "birthDate",
+									"value": "eq2024-05-23T09:03:25.206Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1 Выбрать с 'ne'",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Get?birthDate=ne2024-05-23T09:03:25.206Z",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Get"
+							],
+							"query": [
+								{
+									"key": "birthDate",
+									"value": "ne2024-05-23T09:03:25.206Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1 Выбрать с 'gt'",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Get?birthDate=gt2024-05-23T09:03:25.206Z",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Get"
+							],
+							"query": [
+								{
+									"key": "birthDate",
+									"value": "gt2024-05-23T09:03:25.206Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1 Выбрать с 'lt'",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Get?birthDate=lt2024-12-31T09:03:25.206Z",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Get"
+							],
+							"query": [
+								{
+									"key": "birthDate",
+									"value": "lt2024-12-31T09:03:25.206Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1 Выбрать с 'ge'",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Get?birthDate=ge2024-12-23T09:03:25.206Z",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Get"
+							],
+							"query": [
+								{
+									"key": "birthDate",
+									"value": "ge2024-12-23T09:03:25.206Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.1 Выбрать с 'le'",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:18443/api/Patient/Get?birthDate=le2024-05-23T09:03:25.206Z",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "18443",
+							"path": [
+								"api",
+								"Patient",
+								"Get"
+							],
+							"query": [
+								{
+									"key": "birthDate",
+									"value": "le2024-05-23T09:03:25.206Z"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3. Получить по id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:18443/api/Patient/Get/3fdce0f2-9da1-418b-af1b-1efcd350e949",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "18443",
+					"path": [
+						"api",
+						"Patient",
+						"Get",
+						"3fdce0f2-9da1-418b-af1b-1efcd350e949"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Обновить",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": {\r\n    \"id\": \"{{$guid}}\",\r\n    \"use\": \"official\",\r\n    \"family\": \"NewFamily\",\r\n    \"given\": [\r\n      \"new\",\r\n      \"new\"\r\n    ]\r\n  },\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"2024-05-23T09:19:27.207Z\",\r\n  \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:18443/api/Patient/Update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "18443",
+					"path": [
+						"api",
+						"Patient",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Удалить по id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:18443/api/Patient/Delete/{{$guid}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "18443",
+					"path": [
+						"api",
+						"Patient",
+						"Delete",
+						"{{$guid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
